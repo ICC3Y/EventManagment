@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Events</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#c86af7",
+                        "on-secondary-fixed": "#5b0b67",
+                        "tertiary": "#ffe07d",
+                        "on-tertiary-fixed": "#423500",
+                        "tertiary-fixed-dim": "#ebc31a",
+                        "surface": "#0e0e0e",
+                        "primary": "#ffffff",
+                        "on-primary-fixed": "#000000",
+                        "on-primary-fixed-variant": "#4a006b",
+                        "inverse-on-surface": "#555555",
+                        "on-tertiary-fixed-variant": "#645100",
+                        "surface-tint": "#ffffff",
+                        "outline": "#757575",
+                        "error": "#ff6e84",
+                        "on-surface-variant": "#ababab",
+                        "error-dim": "#d73357",
+                        "primary-dim": "#d277ff",
+                        "inverse-surface": "#f9f9f9",
+                        "on-surface": "#ffffff",
+                        "error-container": "#a70138",
+                        "surface-container-low": "#131313",
+                        "surface-variant": "#262626",
+                        "on-background": "#ffffff",
+                        "on-secondary-container": "#febaff",
+                        "tertiary-fixed": "#fbd12d",
+                        "primary-fixed": "#d37bff",
+                        "tertiary-dim": "#ebc31a",
+                        "surface-container-high": "#1f1f1f",
+                        "secondary-dim": "#e28ce8",
+                        "on-primary-container": "#3c0057",
+                        "on-tertiary-container": "#594700",
+                        "on-secondary-fixed-variant": "#7c3086",
+                        "on-secondary": "#5e0f69",
+                        "surface-container-lowest": "#000000",
+                        "tertiary-container": "#fbd12d",
+                        "outline-variant": "#484848",
+                        "on-tertiary": "#635000",
+                        "on-primary": "#000000",
+                        "secondary-container": "#71257b",
+                        "surface-dim": "#0e0e0e",
+                        "on-error": "#490013",
+                        "secondary": "#f199f7",
+                        "on-error-container": "#ffb2b9",
+                        "surface-bright": "#2c2c2c",
+                        "secondary-fixed-dim": "#fba6ff",
+                        "secondary-fixed": "#febcff",
+                        "background": "#0e0e0e",
+                        "inverse-primary": "#8e2fbd",
+                        "surface-container": "#191919",
+                        "surface-container-highest": "#262626",
+                        "primary-container": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen pb-24 selection:bg-white/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+<button class="text-[#C6C6CB] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-xl text-white">My Events</h1>
+<button class="w-8 h-8 rounded-full overflow-hidden active:scale-95 duration-200 ring-2 ring-transparent hover:opacity-80 transition-opacity">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Portrait of a young woman with warm lighting against a dark background, professional and approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYJU7WPkx5R8LRryltJGk6YZ4x_GOjfJwPeFBSb5waU4gaWRaY2Ay6JStUz7Tl11oZe6Tu7dhCZsw_K4LeXx0oL0qIIti0YKSMO3WYX6qi6HyVpS5qf1UkrilVqQKydZBGGHH7OXwvU7WZLBXwD_VUeykCJUBl-HKqPd5b3z6657qnz-NCbdGbN_sUKVIddwlGxM6rOgDgY3BBrQbtrdotT3yHhzn4K2i8ZqSumYSP6TIUtrjLfaXyIflzgE2LG8cVFKwsc5GUYTgL"/>
+</button>
+</header>
+<main class="pt-24 px-6 max-w-lg mx-auto">
+<!-- Current Events Section -->
+<section class="mb-10">
+<h2 class="font-headline text-lg font-bold tracking-tight mb-4 text-on-surface">Current Events</h2>
+<!-- Horizontal Scroll Container -->
+<div class="flex overflow-x-auto hide-scrollbar gap-4 pb-4 -mx-6 px-6 snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="min-w-[85%] snap-center rounded-2xl bg-surface-container-low overflow-hidden relative group">
+<div class="aspect-[4/3] w-full relative">
+<img alt="Event cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vibrant night club scene with purple and pink laser lights, crowd dancing, energetic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpclILCYBfcK0Zj7bnFzZC6Ifxfh3sHOJxB03iWyR1MBRxC6jrdBP7-tEAVj2ZKdTeUayetGnWFe7ddvfvUTdpNU7AvH35iuH96gpdQR3zx_9dyDNh4whFvmmtZn87Vc3Kw00qcHnlL-T5zPaT5pdza_V_cLFmVHkyNx-m8blK7V3zLRo5C376yDHD2unfoaG3WJk0l2yKnoYWkG4sCNiPvn5MsLzDH7MYY6Cy8QiE70yVRqPiZtG8QFhvMLL_BpImKXDULFh9fPG2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<!-- Badge -->
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary-fixed px-3 py-1 rounded-md text-xs font-bold tracking-wide uppercase shadow-lg">
+                            Free
+                        </div>
+</div>
+<div class="p-5 relative -mt-6">
+<h3 class="font-headline text-xl font-bold mb-1 leading-tight text-on-surface">Gullie Dubai Summer Social</h3>
+<p class="text-sm text-[#C6C6CB] font-medium flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 10:00 PM · Dubai
+                        </p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-md bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</div>
+<span class="text-xs font-semibold text-[#C6C6CB]">Gullie HQ</span>
+</div>
+<div class="flex -space-x-2">
+<img alt="Attendee" class="w-6 h-6 rounded-full border border-surface-container-low" data-alt="Portrait of a young man smiling in urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4CDvCbvxIcIXaZfIcGeQqan0xiZnYEJvAbfW5CGvQjWX-aMFi_bcw6TIRzo3cf3aW7D4bkJfhVQ_ynQ8wxBM30QJfpu1lK1kUoJVDIUV6keYMXU6V-dbAIu87oI2jMsriLmo1N9nBk9FwyWXlF4lGvBFwPbF8ygSnV3JOIqW-hcca8UV4ubk37VYFGsujrTNHVWiGo-NOG6f3oCR9ZmM3O_i4Z2Zq1OWON_AgIToXo-WD4EY6o4l8D3oybqp9-5hFppWAJ91cd9xK"/>
+<img alt="Attendee" class="w-6 h-6 rounded-full border border-surface-container-low" data-alt="Portrait of a woman with curly hair looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjWRN1k7coZ-Bw6eoqO7rvZCK4EnW99tTK_pnyxh3HVHD_nxJLYzKUai7pWqqS_DlJkDEHRKvq7eaMtsUVGNZJTYs5U7HS4FEPPaPWS2da1yDPF4hJLF19nxO2WZnb2po0xdpZ6UmF55kaPxkSjZsTsL4egaK5nIyzR0PZZ2s6_dx3DHiNoKBicmPySBB-yoRVRV_NGudxfate2hG1uXFGyw4ql7pQms6dRVU_4OGFttwmXDIQBx_ljvHOtUNUCnwJ4A175gxhhuwi"/>
+<img alt="Attendee" class="w-6 h-6 rounded-full border border-surface-container-low" data-alt="Portrait of a man with a beard looking thoughtful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0yX2dsM3OLcq58ob6Ame21_KzaqEOwufHtUGX2iWdZToqqMVSG_w_TTxsKy32DDf1xPjWXPY0o7_bPEse3-D2bZIlJlqf-FK6zxchpx8QhcRguxl045HPb1Latt9dUwKZ8jYrILrS_6zf_AVuVr8koSaXeqgixO-RDu9ODFmRTHTdtWQIWI-DKS7xBe_2a8LXAOh__7h_c1njgLRCLga79pdGYPRUvm2PGkk2IBl2ZigGUBipwuvSy56_j5aHwdABJp-JFpMk7hmZ"/>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-surface-container-low flex items-center justify-center text-[10px] font-bold text-on-surface">+12</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[85%] snap-center rounded-2xl bg-surface-container-low overflow-hidden relative group">
+<div class="aspect-[4/3] w-full relative">
+<img alt="Event cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract colorful light trails at a late night electronic music festival." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWb3wmTsW1PnWyzIk2QIumR21vQX_IIY_oX5bWCDmiNUVFL4sFVACnbamnrxOfVWmqjsPeuJtgZG60CDcnqqQopv-colz6Obr-N4md6_CmXUfty2RCGhILV2RKSWnsLjT1CUXGDgi_GVWSPsbxULFF_Q9Zvwt4SXfbuYhmNSpNNhQTqfTAa3d5YkJynqMmJLablmcxW_0-rQptvpejWLCfKBQH4OqS7mDPMowS-JmC0-h6mv_wYPn-VtQn-LXui4QdQDKvPD4X-iNy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<!-- Badge -->
+<div class="absolute top-4 left-4 bg-primary text-on-primary-fixed px-3 py-1 rounded-md text-xs font-bold tracking-wide uppercase shadow-lg">
+                            Paid
+                        </div>
+</div>
+<div class="p-5 relative -mt-6">
+<h3 class="font-headline text-xl font-bold mb-1 leading-tight text-on-surface">Neon Nights Warehouse Party</h3>
+<p class="text-sm text-[#C6C6CB] font-medium flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 11:30 PM · Al Quoz
+                        </p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-md bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-primary">headphones</span>
+</div>
+<span class="text-xs font-semibold text-[#C6C6CB]">Underground DXB</span>
+</div>
+<div class="flex -space-x-2">
+<img alt="Attendee" class="w-6 h-6 rounded-full border border-surface-container-low" data-alt="Portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJPG7vOYvQfMIdQctNLhVTGzFe3IBui9-qX376THjRYSBwwyH741ZqlXZClP0ievXp-6uEkjtsePY8Z6RyG5OGiwt8qlPVlfUB9XkeDGLJyLofNqHMgwSD2Lfg2Xy0zaKF-_xU1GPazQ9wA9byyE4cAdLHNKBIe043FCcddvMd9u_uW8PO-jtHiZTEKUvgMe70Wgh7tegPspfHfiukcbqAQtc16mY_OKL_mvKYKhXtO9-wqGKu9kyVPZms79etBOcesWnXzDjBOpX1"/>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-surface-container-low flex items-center justify-center text-[10px] font-bold text-on-surface">+45</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Events Section -->
+<section>
+<h2 class="font-headline text-lg font-bold tracking-tight mb-6 text-on-surface">Upcoming Events</h2>
+<div class="flex flex-col gap-6">
+<!-- List Item 1 -->
+<div class="flex gap-4 group cursor-pointer">
+<!-- Date Block -->
+<div class="flex flex-col items-center min-w-[3rem] pt-1">
+<span class="text-xs font-bold text-[#C6C6CB] uppercase tracking-widest">Jan</span>
+<span class="text-2xl font-bold text-on-surface leading-none mt-1 group-hover:text-primary transition-colors">29</span>
+</div>
+<!-- Content Card -->
+<div class="flex-1 bg-surface-container-low rounded-xl p-3 flex gap-4 transition-colors group-hover:bg-surface-container">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+<img alt="Event thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A brightly lit stage at an outdoor music concert with silhouettes of people in the foreground." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfJYxKRGsSwt5w3K_5QiVG0QUPVrh0JO63Ut-r6CZCJLBxHYDpeuvDqmr8trYD6sywdXd2cJwD_M9pp4p9W3WVVzPfh6ttZLYJK0Ly1qnJZi5dUIb8Szkggl1TlRbgrURRehM_Prt4ApExXl2Og8DXZlCluWAb8G56fXQXZOsm-3ejifEsa4fBXSI7UVrnPVAXTWtTKXxwO4RQhWav-tR_LiQpositC4F5QC9FRdqp1LavrXbEvRnkVIYH5sDwvK7NSrU4w4er88by"/>
+</div>
+<div class="flex-1 py-1">
+<h4 class="font-headline font-bold text-base leading-tight mb-1 text-on-surface line-clamp-2">Sunset Sessions at Zero Gravity</h4>
+<p class="text-xs text-[#C6C6CB] font-medium flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5:00 PM · Marina
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-[10px] font-semibold text-[#C6C6CB] bg-surface-container-highest px-2 py-0.5 rounded">Beach Club</span>
+<div class="flex -space-x-1.5">
+<img alt="Attendee" class="w-4 h-4 rounded-full border border-surface-container-low" data-alt="Tiny portrait of a person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIFPSldrDdVW9BGSGHm5uGExXqdumUj4ib6h_hjQ9z4fux1g-41wh1XTxXqrm13kEgcrPllc-sZlmYnwHZbx3ZQTJnjlkgje-8h9Mbydsv8QCY3g-jx4OmPi-zqVGL4mHidBJtFW6Ar96oG6a5ohWk4P9Cn8jSBxnR5eSy1_oUMg7tfFaiEBI3GjmOPQvjaCnwfPva4dMoF5f1-vnH03OTwkMJ5KVrCuiH9AYx51YKQda-aSZhhgXHiPbu4To6bJweL4LhNNnU_fYk"/>
+<img alt="Attendee" class="w-4 h-4 rounded-full border border-surface-container-low" data-alt="Tiny portrait of a person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoJkHs9pC4MX4J_hFvrbK9AsnV1x_MMD9HBlRMwDIZukuga9i9rHCcKxpYxKJRVU1uIXF7GIwzddWxb7hREV6wEbr3U8VGPfNYyo8Kkksm-0VuuMo_2jH2vP64i4rk1k67aYjdgWW0yPfm81WWnUl7AjAPggynBJBPmhnzmHAoi25fLoTO--CorcYt33twvumU2SiEl9r61kZRjD82XAI8HwPTBDhjMvPQqAu4n6EiqAruCE0nVKNHNXoix3r0W2LsnJRERB2ztAts"/>
+<div class="w-4 h-4 rounded-full bg-surface-container-highest border border-surface-container-low flex items-center justify-center text-[8px] font-bold text-on-surface">+8</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex gap-4 group cursor-pointer">
+<!-- Date Block -->
+<div class="flex flex-col items-center min-w-[3rem] pt-1">
+<span class="text-xs font-bold text-[#C6C6CB] uppercase tracking-widest">Feb</span>
+<span class="text-2xl font-bold text-on-surface leading-none mt-1 group-hover:text-primary transition-colors">04</span>
+</div>
+<!-- Content Card -->
+<div class="flex-1 bg-surface-container-low rounded-xl p-3 flex gap-4 transition-colors group-hover:bg-surface-container">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+<img alt="Event thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Vintage microphone on stage in a dark jazz club setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtkN7QrX_qfhMIYH0e3grOM_j3CNgxbPPFwla8czCsMmk5dEnmbatcYVTPZ6L3-tDdF3IarI3cF4iGoYhjZo6Af7WdvplC_NU59e3kOCPcXyxaFImVllCVsjOvTZGvlNaeJT6ElLd3t3AxtoIfwcfN-OFTi-8HWq-WuUUSkKKfxAnLbMVWkIJNxOx88GA5yBrG1saD2kTON_G3LuJ1lr4eftHZgyKuYXTm2P4V_2Gk1R3bHZj4bhhOYbf3GihRaCL49MopjAX8PHYu"/>
+</div>
+<div class="flex-1 py-1">
+<h4 class="font-headline font-bold text-base leading-tight mb-1 text-on-surface line-clamp-2">Jazz &amp; Dinner Night</h4>
+<p class="text-xs text-[#C6C6CB] font-medium flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 8:30 PM · DIFC
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-[10px] font-semibold text-[#C6C6CB] bg-surface-container-highest px-2 py-0.5 rounded">Live Music</span>
+<div class="flex -space-x-1.5">
+<img alt="Attendee" class="w-4 h-4 rounded-full border border-surface-container-low" data-alt="Tiny portrait of a person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc6Cm3I9TLyPrrkuV7L5GRvZXAQBKjcaUr2Wk-pDsNaN-IQ25kVyZihLzE6KsVnA1kwiO8MpfQMiOMOMC3q39g0IGUMQhi1TYdie_X-QEerDO_R_XlmBZ9pVw0g7cWW8BrkNUsQsLK3gDAobO7k-V-iASyHrVnGYg4TfMVU1VowWkJ2Dnmy7yXU9AUZsR02CXQ9_hAaA84WucEMTEQlzaKAyURn5iZFo3ZifjgXEtKheeqMFQZkG19-g71BvgU-34itJLvv7vBDCDS"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-safe bg-[#131313]/80 backdrop-blur-2xl border-t border-white/5 rounded-t-lg z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+<button class="flex flex-col items-center justify-center text-[#C6C6CB] py-1 px-3 hover:text-white transition-colors active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.05em] font-bold">Discover</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white bg-white/10 rounded-lg py-1 px-3 hover:text-white transition-colors active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.05em] font-bold">My Events</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#C6C6CB] py-1 px-3 hover:text-white transition-colors active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="notifications">notifications</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.05em] font-bold">Notifications</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#C6C6CB] py-1 px-3 hover:text-white transition-colors active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.05em] font-bold">Settings</span>
+</button>
+</nav>
+</body></html>

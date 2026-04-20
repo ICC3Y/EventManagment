@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gullie Dubai Summer Social</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#c6c6c7",
+                    "secondary-fixed-dim": "#ababb0",
+                    "on-secondary": "#1a1b1f",
+                    "on-surface-variant": "#c6c6c6",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#ffffff",
+                    "on-secondary-container": "#e3e2e7",
+                    "tertiary-fixed-dim": "#474747",
+                    "surface-container-lowest": "#0e0e0e",
+                    "inverse-surface": "#e2e2e2",
+                    "on-surface": "#e2e2e2",
+                    "error-container": "#93000a",
+                    "on-tertiary": "#1b1b1b",
+                    "surface-dim": "#131313",
+                    "secondary": "#c6c6cb",
+                    "surface-variant": "#353535",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#46464b",
+                    "primary": "#ffffff",
+                    "outline": "#919191",
+                    "on-primary-fixed-variant": "#e2e2e2",
+                    "secondary-fixed": "#c6c6cb",
+                    "background": "#131313",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-highest": "#353535",
+                    "surface-bright": "#393939",
+                    "on-primary": "#1a1c1c",
+                    "on-primary-container": "#000000",
+                    "on-tertiary-container": "#000000",
+                    "tertiary-container": "#919191",
+                    "primary-fixed-dim": "#454747",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#5d5f5f",
+                    "on-secondary-fixed-variant": "#3a3b3f",
+                    "on-primary-fixed": "#ffffff",
+                    "tertiary": "#e2e2e2",
+                    "surface-container": "#1f1f1f",
+                    "outline-variant": "#474747",
+                    "inverse-on-surface": "#303030",
+                    "tertiary-fixed": "#5e5e5e",
+                    "on-tertiary-fixed-variant": "#e2e2e2",
+                    "primary-container": "#d4d4d4",
+                    "on-secondary-fixed": "#1a1b1f",
+                    "on-background": "#e2e2e2",
+                    "inverse-primary": "#5d5f5f",
+                    "surface": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label": [
+                            "Plus Jakarta Sans"
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col pb-24">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full z-50 bg-[#131313] dark:bg-[#131313] text-[#FFFFFF] shadow-[0px_0px_1px_rgba(255,255,255,0.1)]">
+<div class="flex items-center justify-between px-6 py-4 w-full bg-[#1B1B1B]">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-high transition-colors active:opacity-70">
+<span class="material-symbols-outlined text-[#FFFFFF]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] tracking-[-0.04em] font-bold text-xl text-[#FFFFFF] tracking-tighter">Event Details</h1>
+<div class="w-10"></div> <!-- Placeholder for balance -->
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[72px] flex flex-col items-center">
+<div class="w-full max-w-3xl flex flex-col">
+<!-- Hero Image -->
+<div class="w-full h-80 md:h-[400px] relative bg-surface-container-low overflow-hidden rounded-b-lg md:rounded-lg mt-0 md:mt-6 mx-0 md:mx-auto">
+<img alt="Event Hero Image" class="w-full h-full object-cover object-center opacity-80" data-alt="Cinematic night view of Dubai Marina skyline with modern architecture glowing softly against a dark sky, premium networking vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjxY8fhWQc5XOlrAVRNCIOZp9NFJ8G1PRQ0B1AUldpD0Jtko4WynvZ2tUuUGgSXjtSf7FjUuQepa91Rie-p1qX3yjBW4B9E-c6oksPkkegh_IndEmZOqoRx_7FuvX1sgC3_bZDRPfaWibukv7-QLkbuT0FsDpnJWVnO-8Ugi3dqR_L10NToZFQk9gayou5lpt2IA6Y8C-m5T1-VBCRjdFhzLn4nGIJxV7y_rjrFTZTlQK61UrWHP5frLfJzbDITGV3pi5_EWVI07mH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+</div>
+<!-- Content Area -->
+<div class="px-6 py-8 md:px-12 flex flex-col gap-8 -mt-16 relative z-10">
+<!-- Title & Meta -->
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.05em] text-secondary font-label font-bold">
+<span class="bg-surface-container-high px-3 py-1 rounded-full">Networking</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-primary">Founders</span>
+</div>
+<h2 class="text-3xl md:text-5xl font-headline font-bold text-primary tracking-[-0.04em] leading-tight">
+                        Gullie Dubai Summer Social: Founders x Investors x Operators
+                    </h2>
+</div>
+<!-- Bento Info Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Date -->
+<div class="bg-surface-container-low p-5 rounded-lg border border-outline-variant/15 flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container to-transparent opacity-50"></div>
+<span class="material-symbols-outlined text-secondary relative z-10" data-icon="calendar_today">calendar_today</span>
+<div class="relative z-10 flex flex-col">
+<span class="text-xs uppercase tracking-[0.05em] text-secondary font-semibold">Date</span>
+<span class="text-lg font-bold text-primary">JAN 29</span>
+</div>
+</div>
+<!-- Time -->
+<div class="bg-surface-container-low p-5 rounded-lg border border-outline-variant/15 flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container to-transparent opacity-50"></div>
+<span class="material-symbols-outlined text-secondary relative z-10" data-icon="schedule">schedule</span>
+<div class="relative z-10 flex flex-col">
+<span class="text-xs uppercase tracking-[0.05em] text-secondary font-semibold">Time</span>
+<span class="text-lg font-bold text-primary">10:00 PM</span>
+</div>
+</div>
+<!-- Location -->
+<div class="bg-surface-container-low p-5 rounded-lg border border-outline-variant/15 flex flex-col gap-2 relative overflow-hidden col-span-2">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container to-transparent opacity-50"></div>
+<span class="material-symbols-outlined text-secondary relative z-10" data-icon="location_on">location_on</span>
+<div class="relative z-10 flex flex-col">
+<span class="text-xs uppercase tracking-[0.05em] text-secondary font-semibold">Location</span>
+<span class="text-lg font-bold text-primary truncate">Dubai Marina</span>
+</div>
+</div>
+</div>
+<!-- Description -->
+<div class="flex flex-col gap-4 mt-4">
+<h3 class="text-sm uppercase tracking-[0.05em] text-secondary font-semibold">About the Event</h3>
+<p class="text-on-surface-variant text-base md:text-lg leading-relaxed font-body">
+                        Join us for an exclusive evening at the Gullie Dubai Summer Social. This curated networking event brings together visionary founders, strategic investors, and dynamic operators in the heart of Dubai Marina. Expect insightful conversations, unparalleled connection building, and the opportunity to collaborate with key players shaping the future ecosystem. Space is strictly limited to ensure meaningful interactions.
+                    </p>
+</div>
+<!-- Empty space for scroll clearance above fixed button -->
+<div class="h-10"></div>
+</div>
+</div>
+</main>
+<!-- Prominent Fixed Register Button Container -->
+<div class="fixed bottom-0 left-0 w-full z-40 bg-gradient-to-t from-surface via-surface/90 to-transparent pt-12 pb-6 px-6 flex justify-center backdrop-blur-sm">
+<div class="w-full max-w-3xl">
+<button class="w-full bg-primary text-on-primary font-headline font-bold text-lg py-4 px-8 rounded-lg shadow-[0px_4px_20px_rgba(255,255,255,0.1)] active:scale-[0.98] transition-transform flex items-center justify-center gap-2 hover:bg-primary-container">
+                Register
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>
