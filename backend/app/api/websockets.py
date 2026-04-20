@@ -1,37 +1,32 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
-from typing import List, Dict
+from typing import List, Dict, Set
 import json
 
 router = APIRouter()
 
 class ConnectionManager:
     def __init__(self):
-        # active_connections maps topic to list of websockets
-        self.active_connections: Dict[str, List[WebSocket]] = {
-            "gates": [],
-            "incidents": [],
-            "pings": []
-        }
+        # active_connections maps topic to set of websockets for O(1) removal
+        self.active_connections: Dict[str, Set[WebSocket]] = {}
 
     async def connect(self, websocket: WebSocket, topic: str):
         await websocket.accept()
-        if topic in self.active_connections:
-            self.active_connections[topic].append(websocket)
-        else:
-            self.active_connections[topic] = [websocket]
+        if topic not in self.active_connections:
+            self.active_connections[topic] = set()
+        self.active_connections[topic].add(websocket)
 
     def disconnect(self, websocket: WebSocket, topic: str):
-        if topic in self.active_connections and websocket in self.active_connections[topic]:
-            self.active_connections[topic].remove(websocket)
+        if topic in self.active_connections:
+            self.active_connections[topic].discard(websocket)
 
     async def broadcast(self, message: dict, topic: str):
         if topic in self.active_connections:
-            for connection in self.active_connections[topic]:
+            # Create a copy to iterate while allowing discards if errors occur
+            for connection in list(self.active_connections[topic]):
                 try:
                     await connection.send_json(message)
                 except Exception:
-                    # Handle disconnected clients that weren't cleaned up yet
-                    pass
+                    self.active_connections[topic].discard(connection)
 
 manager = ConnectionManager()
 
@@ -46,9 +41,10 @@ async def websocket_endpoint(websocket: WebSocket, topic: str):
     await manager.connect(websocket, topic)
     try:
         while True:
-            data = await websocket.receive_text()
-            # If clients send messages, we broadcast them to the same topic
-            message = json.loads(data)
+            # We use receive_json for cleaner parsing
+            message = await websocket.receive_json()
             await manager.broadcast(message, topic=topic)
     except WebSocketDisconnect:
+        manager.disconnect(websocket, topic)
+    except Exception:
         manager.disconnect(websocket, topic)
