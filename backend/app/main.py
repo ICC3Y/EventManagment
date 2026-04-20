@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.database import engine, Base
 from app.api import rest, websockets
-from app.models import models
+from app.models import models  # noqa: F401
 
 # Create database tables
 Base.metadata.create_all(bind=engine)

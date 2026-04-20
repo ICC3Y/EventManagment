@@ -1,6 +1,5 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
-from typing import List, Dict, Set
-import json
+from typing import Dict, Set
 
 router = APIRouter()
 
